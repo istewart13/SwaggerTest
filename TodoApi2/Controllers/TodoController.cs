@@ -64,7 +64,7 @@ namespace TodoApi2.Controllers
             _context.TodoItems.Add(item);
             _context.SaveChanges();
 
-            return CreatedAtAction("GetTodo", new { id = item.Id }, item);
+            return CreatedAtRoute("GetTodo", new { id = item.Id }, item);
         }
     }
 }
